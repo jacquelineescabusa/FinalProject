@@ -1,22 +1,16 @@
 {
   "surveys": [
     {
-      "name": "Diccion",
-      "color": "blue",
-      "movies": [
-        "harry potter"
+      "name": "JACQUELINE ESCABUSA",
+      "address": "PILAR",
+      "services": "Was better than expected",
+      "paid": "A good value",
+      "perform": "Strongly Agree",
+      "recommend": [
+        "COLLEGUES"
       ],
-      "gender": "male",
+      "feedback": "ORAYT!",
       "id": 1
-    },
-    {
-      "name": "Diccion",
-      "color": "blue",
-      "movies": [
-        "harry potter"
-      ],
-      "gender": "male",
-      "id": 4
     }
   ]
 }
