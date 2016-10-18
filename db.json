@@ -1,15 +1,13 @@
 {
   "surveys": [
     {
-      "name": "JACQUELINE ESCABUSA",
-      "address": "PILAR",
-      "services": "Was better than expected",
-      "paid": "A good value",
-      "perform": "Strongly Agree",
-      "recommend": [
-        "COLLEGUES"
-      ],
-      "feedback": "ORAYT!",
+      "name": "",
+      "address": "",
+      "services": "",
+      "paid": "",
+      "perform": "",
+      "recommend": [],
+      "feedback": "",
       "id": 1
     }
   ]

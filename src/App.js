@@ -265,119 +265,126 @@ saveEdit = (id) =>{
         return (
             <div className="container">
                 <div className="page-header">
-                <div className="header">Customer Satisfaction Survey</div>
+                <h2 className="text-center">ABSENCE REQUEST FORM</h2>
                    
                     
                 </div>
                 <div className="jumbotron">
-                    <h2 className="text-center">YOU TALK... WE LISTEN!</h2><br/>
+                    
                                 <Form>
                                     <FormGroup>
-                                    <Table>
-                                    <tr>
-                                    <th>
+                                    
                                         
-                                        
+                                        <ControlLabel>EMPLOYEE NAME:</ControlLabel>
                                         <FormControl name
                                             type="text"
-                                            placeholder="ENTER FULLNAME"
+                                           
                                             value={this.state.name}
                                             onChange={this.onChange('name')}
                                             />
-                               </th>
-                                        
-                                       <th> <FormControl add
+                            
+                                        <ControlLabel>EMPLOYEE NUMBER:</ControlLabel>
+                                        <FormControl add
                                             type="text"
-                                            placeholder="ENTER ADDRESS"
+                                        
                                             value={this.state.address}
                                             onChange={this.onChange('address')}
                                             />
-                                            </th>
-                                            </tr>
-                                            </Table>
+                                         
+                                          <ControlLabel>MANAGER:</ControlLabel>
+                                        <FormControl add
+                                            type="text"
+                                            
+                                            value={this.state.paid}
+                                            onChange={this.onChange('paid')}
+                                            />
+                                         
                                     </FormGroup> 
+                                    
+                                        <FormGroup>
+                                        <ControlLabel>Gender</ControlLabel>
                                        
+                                        <Radio name="perform" value="Male"
+                                               onChange={this.onChange('perform')}>Male</Radio>
+                                        <Radio name="perform" value="Female"
+                                               onChange={this.onChange('perform')}>Female</Radio>
+                                    
+                                    
+                                               
+                                    </FormGroup>
                                     <FormGroup>
-                                    <Table><tr><th>
-                                        <ControlLabel>How was the services offered,is it better?</ControlLabel>
+                                   
+                                        <ControlLabel>DEPARTMENT</ControlLabel>
                                         <FormControl componentClass="select"
                                                      placeholder="services"
                                                      value={this.state.services}
                                                      onChange={this.onChange('services')}
                                             >
-                                            <option value="Was better than expected">Was better than expected</option>
-                                            <option value="Matched expectations">Matched expectations</option>
-                                            <option value="Was worse than expected">Was worse than expected</option>
-                                        </FormControl></th>
+                                            <option value="HR">HR</option>
+                                            <option value="FACILITIES">FACILITIES</option>
+                                            <option value="FINANCE">FINANCE</option>
+                                        </FormControl>
 
-                                        <th>
-                                        <ControlLabel>How was the overall value you paid for?</ControlLabel>
-                                        <FormControl componentClass="select"
-                                                     placeholder="paid"
-                                                     value={this.state.paid}
-                                                     onChange={this.onChange('paid')}
-                                            >
-                                            <option value="An exceptional value,">An exceptional value</option>
-                                            <option value="A good value">A good value</option>
-                                            <option value="A poor value">A poor value</option>
-                                        </FormControl></th></tr></Table></FormGroup>
                                         
-                                    <FormGroup>
-                                        <ControlLabel>Overall, are you satisfied with the way the stablishment performed?</ControlLabel>
-                                        <Table><tr><th>
-                                        <Radio name="perform" value="Strongly Disagree"
-                                               onChange={this.onChange('perform')}>Strongly Disagree</Radio>
-                                        <Radio name="perform" value="Somewhat Disagree"
-                                               onChange={this.onChange('perform')}>Somewhat Disagree</Radio>
-                                       <Radio name="perform" value="Neither Agree nor Disagree"
-                                               onChange={this.onChange('perform')}>Neither Agree nor Disagree</Radio></th>
-                                       <th> <Radio name="perform" value="Somewhat Agree"
-                                               onChange={this.onChange('perform')}>Somewhat Agree</Radio>
-                                       <Radio name="perform" value="Strongly Agree"
-                                               onChange={this.onChange('perform')}>Strongly Agree</Radio>
-                                               </th></tr></Table>
-                                    </FormGroup>
+                                        <ControlLabel>How was the overall value you paid for?</ControlLabel>
+                                       </FormGroup>
+                                        
+                                   
                                     
                                        
                                    
-                                    <FormGroup>
                                    
-                                        <ControlLabel>RECOMMEND US</ControlLabel>
-                                         <Table><tr><th>
-                                        <Checkbox value="FAMILY"
-                                                  checked={this.state.recommend.indexOf('FAMILY')>=0 ? true:false}
-                                                  onChange={this.checkboxChange('recommend')}>
-                                            FAMILY
-                                        </Checkbox></th>
-                                       <th> <Checkbox value="COLLEGUES"
-                                                  checked={this.state.recommend.indexOf('COLLEGUES')>=0 ? true:false}
-                                                  onChange={this.checkboxChange('recommend')}>
-                                            COLLEGUES
-                                            </Checkbox></th>
-                                       <th> <Checkbox value="COMMUNITY"
-                                                  checked={this.state.recommend.indexOf('COMMUNITY')>=0 ? true:false}
-                                                  onChange={this.checkboxChange('recommend')}>
-                                            COMMUNITY
-                                        </Checkbox></th>
-                                       <th> <Checkbox value="BATCH"
-                                                  checked={this.state.recommend.indexOf('BATCH')>=0 ? true:false}
-                                                  onChange={this.checkboxChange('recommend')}>
-                                           BATCH
-                                            
-                                        </Checkbox></th></tr></Table>
-                                    </FormGroup>
                                     <FormGroup>
-                                            <ControlLabel>FEEDBACK FOR IMPROVEMENT</ControlLabel><br/>
+                                        <ControlLabel>TYPES OF ABSENCE REQUEST </ControlLabel>
+                                        <Checkbox value="SICK"
+                                                  checked={this.state.recommend.indexOf('SICK')>=0 ? true:false}
+                                                  onChange={this.checkboxChange('recommend')}>
+                                           SICK
+                                        </Checkbox> 
+                                        <Checkbox value="VACATION"
+                                                  checked={this.state.recommend.indexOf('VACATION')>=0 ? true:false}
+                                                  onChange={this.checkboxChange('recommend')}>
+                                          VACATION
+                                        </Checkbox>
+                                        <Checkbox value="DURY DUTY"
+                                                  checked={this.state.recommend.indexOf('DURY DUTY')>=0 ? true:false}
+                                                  onChange={this.checkboxChange('recommend')}>
+                                       DURY DUTY
+                                       
+                                        </Checkbox>
+                                        <Checkbox value="BEREAVEMENT"
+                                                  checked={this.state.recommend.indexOf('BEREAVEMENT')>=0 ? true:false}
+                                                  onChange={this.checkboxChange('recommend')}>
+                                     BEREAVEMENT
+                                        </Checkbox>
+                                        <Checkbox value="MANATERNITY/PATERNITY"
+                                                  checked={this.state.recommend.indexOf('MANATERNITY/PATERNITY')>=0 ? true:false}
+                                                  onChange={this.checkboxChange('recommend')}>
+                                      MANATERNITY/PATERNITY
+                                       
+                                        </Checkbox>
+                                        <Checkbox value="OTHERS"
+                                                  checked={this.state.recommend.indexOf('OTHERS')>=0 ? true:false}
+                                                  onChange={this.checkboxChange('recommend')}>
+                                     OTHERS
+                                       
+                                        </Checkbox>
+                                    </FormGroup>
+                                    
+                                    
+                                    
+                                    <FormGroup>
+                                        <ControlLabel>REASON FOR ABSENCE:   </ControlLabel><br/>
                                         <textarea
                                             type="textarea"
-                                            placeholder="Please share with us a few things!"
+                                            placeholder=""
                                             value={this.state.feedback}
                                             onChange={this.onChange('feedback')}
-                                            cols = "80"
-                                            rows = "6"
-                                                />
+                                            cols="160"
+                                            rows="8"
+                                            />
                                     </FormGroup>
-
+                                   
 
                                     <ButtonGroup>
 
@@ -388,7 +395,7 @@ saveEdit = (id) =>{
                                 </div>
                                 
                         <div className="jumbotron">
-                             <div className="header">RESULTS</div>
+                           
                                 <Table condensed striped bordered hover>
                                     <thead>
                                     <tr>
@@ -420,112 +427,120 @@ saveEdit = (id) =>{
                         <Modal.Title id="contained-modal-title">Contained Modal</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                    <Form>
+                     <Form>
                                     <FormGroup>
-                                    <Table>
-                                    <tr>
-                                    <th>
+                                    
                                         
-                                        
+                                        <ControlLabel>EMPLOYEE NAME:</ControlLabel>
                                         <FormControl name
                                             type="text"
-                                            placeholder="ENTER FULLNAME"
+                                           
                                             value={this.state.selectedName}
                                             onChange={this.modalonChange('selectedName')}
                                             />
-                               </th>
-                                        
-                                       <th> <FormControl address
+                            
+                                        <ControlLabel>EMPLOYEE NUMBER:</ControlLabel>
+                                        <FormControl add
                                             type="text"
-                                            placeholder="ENTER ADDRESS"
+                                        
                                             value={this.state.selectedAddress}
                                             onChange={this.modalonChange('selectedAddress')}
                                             />
-                                            </th>
-                                            </tr>
-                                            </Table>
+                                         
+                                          <ControlLabel>MANAGER:</ControlLabel>
+                                        <FormControl add
+                                            type="text"
+                                            
+                                            value={this.state.selectedPaid}
+                                            onChange={this.modalonChange('selectedPaid')}
+                                            />
+                                         
                                     </FormGroup> 
+                                    
+                                        <FormGroup>
+                                        <ControlLabel>Gender</ControlLabel>
                                        
+                                        <Radio name="perform" value="Male"
+                                               onChange={this.modalonChange('selectedPerform')}>Male</Radio>
+                                        <Radio name="perform" value="Female"
+                                               onChange={this.modalonChange('selectedPerform')}>Female</Radio>
+                                    
+                                    
+                                               
+                                    </FormGroup>
                                     <FormGroup>
-                                    <Table><tr><th>
-                                        <ControlLabel>How was the services offered,is it better?</ControlLabel>
+                                   
+                                        <ControlLabel>DEPARTMENT</ControlLabel>
                                         <FormControl componentClass="select"
-                                                     placeholder="services"
+                                                    
                                                      value={this.state.selectedServices}
                                                      onChange={this.modalonChange('selectedServices')}
                                             >
-                                            <option value="Was better than expected">Was better than expected</option>
-                                            <option value="Matched expectations">Matched expectations</option>
-                                            <option value="Was worse than expected">Was worse than expected</option>
-                                        </FormControl></th>
+                                            <option value="HR">HR</option>
+                                            <option value="FACILITIES">FACILITIES</option>
+                                            <option value="FINANCE">FINANCE</option>
+                                        </FormControl>
 
-                                        <th>
-                                        <ControlLabel>How was the overall value you paid for?</ControlLabel>
-                                        <FormControl componentClass="select"
-                                                     placeholder="paid"
-                                                     value={this.state.selectedPaid}
-                                                     onChange={this.modalonChange('selectedPaid')}
-                                            >
-                                            <option value="An exceptional value,">An exceptional value</option>
-                                            <option value="A good value">A good value</option>
-                                            <option value="A poor value">A poor value</option>
-                                        </FormControl></th></tr></Table></FormGroup>
                                         
-                                    <FormGroup>
-                                        <ControlLabel>Overall, are you satisfied with the way the stablishment performed?</ControlLabel>
-                                        <Table><tr><th>
-                                        <Radio name="selectedPerform" value="Strongly Disagree"
-                                               onChange={this.modalonChange('selectedPerform')}>Strongly Disagree</Radio>
-                                        <Radio name="selectedPerform" value="Somewhat Disagree"
-                                               onChange={this.modalonChange('selectedPerform')}>Somewhat Disagree</Radio>
-                                       <Radio name="selectedPerform" value="Neither Agree nor Disagree"
-                                               onChange={this.modalonChange('selectedPerform')}>Neither Agree nor Disagree</Radio></th>
-                                       <th> <Radio name="selectedPerform" value="Somewhat Agree"
-                                               onChange={this.modalonChange('selectedPerform')}>Somewhat Agree</Radio>
-                                       <Radio name="selectedPerform" value="Strongly Agree"
-                                               onChange={this.modalonChange('selectedPerform')}>Strongly Agree</Radio>
-                                               </th></tr></Table>
-                                    </FormGroup>
+                                        
+                                       </FormGroup>
+                                        
+                                   
                                     
                                        
                                    
-                                    <FormGroup>
                                    
-                                        <ControlLabel>RECOMMEND US</ControlLabel>
-                                         <Table><tr><th>
-                                        <Checkbox value="FAMILY"
-                                                  checked={this.state.selectedRecommend.indexOf('FAMILY')>=0 ? true:false}
-                                                  onChange={this.modalcheckboxChange('selectedRecommend')}>
-                                            FAMILY
-                                        </Checkbox></th>
-                                       <th> <Checkbox value="COLLEGUES"
-                                                  checked={this.state.selectedRecommend.indexOf('COLLEGUES')>=0 ? true:false}
-                                                  onChange={this.modalcheckboxChange('selectedRecommend')}>
-                                            COLLEGUES
-                                            </Checkbox></th>
-                                       <th> <Checkbox value="COMMUNITY"
-                                                  checked={this.state.selectedRecommend.indexOf('COMMUNITY')>=0 ? true:false}
-                                                  onChange={this.modalcheckboxChange('selectedRecommend')}>
-                                            COMMUNITY
-                                        </Checkbox></th>
-                                       <th> <Checkbox value="BATCH"
-                                                  checked={this.state.selectedRecommend.indexOf('BATCH')>=0 ? true:false}
-                                                  onChange={this.modalcheckboxChange('selectedRecommend')}>
-                                           BATCH
-                                            
-                                        </Checkbox></th></tr></Table>
-                                    </FormGroup>
                                     <FormGroup>
-                                            <ControlLabel>FEEDBACK FOR IMPROVEMENT</ControlLabel><br/>
+                                        <ControlLabel>TYPES OF ABSENCE REQUEST </ControlLabel>
+                                        <Checkbox value="SICK"
+                                                  checked={this.state.selectedRecommend.indexOf('SICK')>=0 ? true:false}
+                                                  onChange={this.modalcheckboxChange('selectedRecommend')}>
+                                           SICK
+                                        </Checkbox> 
+                                        <Checkbox value="VACATION"
+                                                  checked={this.state.selectedRecommend.indexOf('VACATION')>=0 ? true:false}
+                                                  onChange={this.modalcheckboxChange('selectedRecommend')}>
+                                          VACATION
+                                        </Checkbox>
+                                        <Checkbox value="DURY DUTY"
+                                                  checked={this.state.selectedRecommend.indexOf('DURY DUTY')>=0 ? true:false}
+                                                  onChange={this.modalcheckboxChange('selectedRecommend')}>
+                                       DURY DUTY
+                                       
+                                        </Checkbox>
+                                        <Checkbox value="BEREAVEMENT"
+                                                  checked={this.state.selectedRecommend.indexOf('BEREAVEMENT')>=0 ? true:false}
+                                                  onChange={this.modalcheckboxChange('selectedRecommend')}>
+                                     BEREAVEMENT
+                                        </Checkbox>
+                                        <Checkbox value="MANATERNITY/PATERNITY"
+                                                  checked={this.state.selectedRecommend.indexOf('MANATERNITY/PATERNITY')>=0 ? true:false}
+                                                  onChange={this.modalcheckboxChange('selectedRecommend')}>
+                                      MANATERNITY/PATERNITY
+                                       
+                                        </Checkbox>
+                                        <Checkbox value="OTHERS"
+                                                  checked={this.state.selectedRecommend.indexOf('OTHERS')>=0 ? true:false}
+                                                  onChange={this.modalcheckboxChange('selectedRecommend')}>
+                                     OTHERS
+                                       
+                                        </Checkbox>
+                                    </FormGroup>
+                                    
+                                    
+                                    
+                                    <FormGroup>
+                                        <ControlLabel>REASON FOR ABSENCE:   </ControlLabel><br/>
                                         <textarea
                                             type="textarea"
-                                            placeholder="Please share with us a few things!"
+                                            placeholder=""
                                             value={this.state.selectedFeedback}
                                             onChange={this.modalonChange('selectedFeedback')}
-                                            cols = "80"
-                                            rows = "6"
-                                                />
+                                            cols="90"
+                                            rows="8"
+                                            />
                                     </FormGroup>
+                                   
                                     <ButtonGroup>
 
                                         <Button bsStyle="primary" onClick={this.saveEdit(this.state.selectedId)}>Save Edit</Button>
@@ -541,3 +556,6 @@ saveEdit = (id) =>{
 }
 
 export default App;
+
+
+
